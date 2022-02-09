@@ -171,7 +171,8 @@ def pretty_echo(event):
             "emojiId": "025"
         },
     ]
-    message=TextSendMessage(text='$$$ 09 回覆emoji訊息', emojis=emoji)
+    if(event.message.text=="我的名字"):
+        message=TextSendMessage(text='$$$ 09 回覆emoji訊息', emojis=emoji)
 
     line_bot_api.reply_message(
         event.reply_token,
@@ -188,7 +189,7 @@ def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
     name = pretty_echo
-    message = dict(pretty_echo)
+    message = dict()
     print(message)
     return message
 
