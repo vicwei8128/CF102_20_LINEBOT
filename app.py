@@ -180,7 +180,7 @@ def getNameEmojiMessage():
             "emojiId": "002"
         }
     ]
-    message = json.TextSendMessage(text='$ LINE emoji $', emojis=emoji)
+    message = MessageEvent(text='$ LINE emoji $', emojis=emoji)
     print(emoji)
     # message = dict()
     print(message)
