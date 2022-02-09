@@ -175,6 +175,7 @@ def getNameEmojiMessage():
             "emojiId": "002"
         }
     ]
+    
     print(name)
     message = dict()
     return message
