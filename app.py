@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+from http.client import responses
 from flask import Flask, request, abort, render_template
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -240,7 +241,7 @@ def getTotalSentMessageCount():
 
 
 def getTodayCovid19Message():
-    response = requests.post("https://covid-19.nchc.org.tw/api/covid19?CK=covid-19@nchc.org.tw&querydata=4001&limited=TWN", headers=HEADER, data=json.dumps())
+    response = requests.post("https://covid-19.nchc.org.tw/api/covid19", headers=HEADER, data=json.dumps())
     date = a05
     total_count = a06
     count = a07
