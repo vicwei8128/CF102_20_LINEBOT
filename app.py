@@ -165,27 +165,20 @@ def sendTextMessageToMe():
     pushMessage({})
     return 'OK'
 
-
 def getNameEmojiMessage():
-    response = requests.post("https://api.line.me/v2/bot/message/reply", headers=HEADER)
-
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = {
-        "type": "text",
-        "text": "$ LINE emoji $",
-        "emojis":
+    name = [
         {
             "index": 0,
             "productId": productId,
             "emojiId": "002"
         }
-        
-    }
+    ]
     print(name)
-    # message = getNameEmojiMessage(text='$ LINE emoji $', emojis=name)
+    message = getNameEmojiMessage(text='$ LINE emoji $', emojis=name)
 
-    message = dict()
+    # message = dict()
     return message
 
 
