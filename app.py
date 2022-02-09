@@ -183,7 +183,7 @@ def getNameEmojiMessage():
     message = TextSendMessage(text='$ LINE emoji $', emojis=emoji)
     print(emoji)
     message = dict()
-
+    print(message)
     return message
 
 
