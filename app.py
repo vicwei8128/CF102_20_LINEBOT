@@ -188,7 +188,7 @@ def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
     name = pretty_echo
-    message = dict()
+    message = dict(pretty_echo)
     print(message)
     return message
 
