@@ -185,7 +185,7 @@ def getNameEmojiMessage():
             "emojiId": "002"
         }
     ]
-    message = getNameEmojiMessage(text='$ LINE emoji $', emojis=emoji)
+    message = getNameEmojiMessage(text='$ LINE emoji $', emojis=name)
 
     # message = dict()
     return message
