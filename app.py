@@ -46,7 +46,8 @@ def index():
                 text = events[0]["message"]["text"]
 
                 if text == "我的名字":
-                    payload["messages"] = [getNameEmojiMessage()]
+                    payload["messages"] = [{
+                        "text":getNameEmojiMessage()}]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
