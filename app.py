@@ -171,12 +171,12 @@ def getNameEmojiMessage():
     productId = "5ac21a8c040ab15980c9b43f"
     name = TextMessage({
         "index": 0,
-        "productId": "5ac21a8c040ab15980c9b43f",
+        "productId": productId,
         "emojiId": "001"
     },
     {
         "index": 1,
-        "productId": "5ac21a8c040ab15980c9b43f",
+        "productId": productId,
         "emojiId": "002"
     })
     # message = getNameEmojiMessage(text='$ LINE emoji $', emojis=name)
