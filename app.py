@@ -46,7 +46,7 @@ def index():
                 text = events[0]["message"]["text"]
 
                 if text == "我的名字":
-                    payload["messages"] = [{"text":getNameEmojiMessage()}]
+                    payload["messages"] = [getNameEmojiMessage()]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
@@ -168,7 +168,6 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-
     name = [
         {
             "index": 0,
@@ -177,8 +176,7 @@ def getNameEmojiMessage():
         }
     ]
     print(name)
-    message=getNameEmojiMessage(text='$ Line', emojis=name)
-    # message = dict()
+    message = dict()
     return message
 
 
