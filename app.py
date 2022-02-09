@@ -169,7 +169,7 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = line_bot_api[
+    name = [
         {
     "type": "text",
     "text": "$ LINE emoji $",
