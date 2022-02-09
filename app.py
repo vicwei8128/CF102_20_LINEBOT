@@ -171,17 +171,8 @@ def pretty_echo(event):
             "emojiId": "025"
         },
     ]
-    if(event.message.text=="Day 07"):
-        message=TextSendMessage("Day 07 line bot sdk python範例程式在做什麼")
-    elif(event.message.text=="Day 08"):
-        message=TextSendMessage("Day 08讓Linebot回覆特定訊息")
-    elif(event.message.text=="Unicode emoji"):
-        message=TextSendMessage("\U0001F449Unicode emoji\U0001F448")
-    elif(event.message.text=="LINE emoji"):
-        message=TextSendMessage(text='$$$ 09 回覆emoji訊息', emojis=emoji)
-    else:
-        message=TextSendMessage(event.message.text)
-        
+    message=TextSendMessage(text='$$$ 09 回覆emoji訊息', emojis=emoji)
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)
@@ -196,21 +187,8 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    emoji = [
-        {
-            "index": 0,
-            "productId": productId,
-            "emojiId": "001"
-        },
-        {
-            "index": 13,
-            "productId": productId,
-            "emojiId": "002"
-        }
-    ]
-    message = MessageEvent(text='$ LINE emoji $', emojis=emoji)
-    print(emoji)
-    # message = dict()
+    name = pretty_echo
+    message = dict()
     print(message)
     return message
 
