@@ -53,7 +53,7 @@ def index():
                     payload["messages"] = [getTaipei101ImageMessage(),
                                            getTaipei101LocationMessage(),
                                            getMRTVideoMessage()]
-                elif text == "quoda":
+                elif text == "quota":
                     payload["messages"] = [
                             {
                                 "type": "text",
