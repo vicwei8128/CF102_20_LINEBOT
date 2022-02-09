@@ -172,12 +172,13 @@ def getNameEmojiMessage():
     name = {
         "type": "text",
         "text": "$ LINE emoji $",
-        "emojis":[{
+        "emojis":
+        {
             "index": 0,
             "productId": productId,
             "emojiId": "002"
-            }
-            ]
+        }
+        
     }
     print(name)
     # message = getNameEmojiMessage(text='$ LINE emoji $', emojis=name)
