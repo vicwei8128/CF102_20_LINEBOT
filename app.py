@@ -167,6 +167,8 @@ def sendTextMessageToMe():
 
 
 def getNameEmojiMessage():
+    response = requests.post("https://api.line.me/v2/bot/message/reply", headers=HEADER)
+
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
     name = {
