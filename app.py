@@ -168,6 +168,10 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
+    {
+        "type": "text",
+        "text": "$ Line emoji"
+        }
     name = [
         {
             "index": 0,
