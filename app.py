@@ -171,12 +171,12 @@ def getNameEmojiMessage():
     emoji = [
         {
             "index": 0,
-            "productId": "5ac1bfd5040ab15980c9b435",
+            "productId": productId,
             "emojiId": "001"
         },
         {
             "index": 13,
-            "productId": "5ac1bfd5040ab15980c9b435",
+            "productId": productId,
             "emojiId": "002"
         }
     ]
