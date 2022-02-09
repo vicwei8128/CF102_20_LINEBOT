@@ -46,7 +46,11 @@ def index():
                 text = events[0]["message"]["text"]
 
                 if text == "我的名字":
-                    payload["messages"] = [getNameEmojiMessage()]
+                    payload["messages"] = [
+                        {"type": "text",
+                        "text": "$ LINE emoji $",
+                        "emojis":getNameEmojiMessage()
+                        }]
                 elif text == "出去玩囉":
                     payload["messages"] = [getPlayStickerMessage()]
                 elif text == "台北101":
@@ -166,29 +170,17 @@ def sendTextMessageToMe():
     return 'OK'
 
 
-def getNameEmojiMessage():
-    lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    productId = "5ac21a8c040ab15980c9b43f"
-    {
-    "type": "text",
-    "text": "$ LINE emoji $",
-    "emojis": [
-      {
-        "index": 0,
-        "productId": "5ac21a8c040ab15980c9b43f",
-        "emojiId": "048"
-      },
-      {
-        "index": 1,
-        "productId": "5ac21a8c040ab15980c9b43f",
-        "emojiId": "035"
-      }
-    ]
-    }
-    name = "048", "035", "029"
-    message = dict()
-    return message
-
+# def getNameEmojiMessage():
+#     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+#     productId = "5ac21a8c040ab15980c9b43f"
+#     name = response.json()["a04"]
+#     message = dict()
+#     return message
+def getNameEmojiMessage(msg *linebot.TextMessage) linebot.SendingMessage {
+	return linebot.NewTextMessage(
+		fmt.Sprintf("$%s 你好 \n , 這是新的傳送 Emoji 的方式。", msg.Text)).AddEmoji(
+		linebot.NewEmoji(0, "5ac1bfd5040ab15980c9b435", "086"))
+}
 
 def getCarouselMessage(data):
     message = dict()
