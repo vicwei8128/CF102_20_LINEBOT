@@ -154,24 +154,6 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def pretty_echo(event):
-    emoji = [
-        {
-            "index": 0,
-            "productId": "5ac21a8c040ab15980c9b43f",
-            "emojiId": "004"
-        },
-        {
-            "index": 1,
-            "productId": "5ac21a8c040ab15980c9b43f",
-            "emojiId": "001"
-        },
-        {
-            "index": 2,
-            "productId": "5ac21a8c040ab15980c9b43f",
-            "emojiId": "025"
-        },
-    ]
-
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)
