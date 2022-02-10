@@ -54,9 +54,7 @@ def index():
                                            getTaipei101LocationMessage(),
                                            getMRTVideoMessage()]
                 elif text == "台北101-img":
-                    payload["messages"] = [getTaipei101ImageMessage()]#,
-                                        #    getTaipei101LocationMessage(),
-                                        #    getMRTVideoMessage()]
+                    payload["messages"] = [getTaipei101ImageMessage()]
                 elif text == "quota":
                     payload["messages"] = [
                             {
@@ -217,6 +215,11 @@ def getPlayStickerMessage():
 
 def getTaipei101LocationMessage():
     message = dict()
+    message["type"] = "location"
+    message["title"] =  "Taipei101"
+    message["address"] = "110台北市信義區信義路五段7號"
+    message["latitude"] = 25.033949538814603
+    message["longitude"] = 121.56462445418927
     return message
 
 
