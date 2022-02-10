@@ -170,7 +170,8 @@ def pretty_echo(event):
             "productId": "5ac21a8c040ab15980c9b43f",
             "emojiId": "025"
         },
-    ]         
+    ]
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)
@@ -185,8 +186,8 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = "$$$"
-    message = pretty_echo(name)
+    name = ""
+    message = dict()
     print(message)
     return message
 
