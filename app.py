@@ -228,11 +228,11 @@ def getCallCarMessage(data):
           "type": "image_carousel",
           "columns": [
               {
-                "imageUrl": F"{end_point}/static/taipei_1.jpeg",
+                "imageUrl": F"{end_point}/static/taipei_101.jpeg",
                 "action": {
                   "type": "postback",
                   "label": "台北101",
-                  "data": json.dumps(data)
+                  "data": "action=buy&itemid=111"
                 }
               },
               {
@@ -240,19 +240,19 @@ def getCallCarMessage(data):
                 "action": {
                 "type": "postback",
                 "label": "台北101",
-                "data": json.dumps(data)
+                "data": "action=buy&itemid=111"
                }
               },
-              {
-                "imageUrl": F"{end_point}/static/taipei_1.jpeg",
-                "action": {
-                "type": "postback",
-                "label": "台北101",
-                "data": json.dumps(data)
-                }
-            }
+            #   {
+            #     "imageUrl": F"{end_point}/static/taipei_1.jpeg",
+            #     "action": {
+            #     "type": "postback",
+            #     "label": "台北101",
+            #     "data": "action=buy&itemid=111"
+            #     }
+            # }
         ]
-    }
+        }
     }
     return message
 
