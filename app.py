@@ -201,7 +201,7 @@ def getCarouselMessage(data):
                 "action": {
                   "type": "postback",
                   "label": "台北101",
-                  "data": "action=buy&itemid=111"
+                  "data": json.dumps(data)
                 }
               },
               {
@@ -209,7 +209,7 @@ def getCarouselMessage(data):
                 "action": {
                 "type": "postback",
                 "label": "台北101",
-                "data": "action=buy&itemid=111"
+                "data": json.dumps(data)
                }
               },
             #   {
@@ -253,8 +253,22 @@ def getLocationConfirmMessage(title, latitude, longitude):
 
 
 def getCallCarMessage(data):
-    message = dict()
-
+    message = {
+      "type": "template",
+      "altText": "this is a confirm template",
+      "template": {
+          "type": "buttons",
+          "text": f"請選擇 {data['title']} 預約叫車時間",
+          "actions": [
+               {
+                "type": "datetimepicker",
+                "label": "預約",
+                "data": json.dumps(data)
+                "mode": "datetime"
+            }
+            ]
+      }
+    }
     return message
 
 
