@@ -206,7 +206,7 @@ def getPlayStickerMessage():
     message = dict()
     message["type"] = "sticker"
     message["productId"] =  "446"
-    message["stickerID"] = "1998"
+    message["stickerId"] = "1998"
     print(message)
     return message
 
