@@ -186,7 +186,7 @@ def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
     name = "$$$"
-    message = pretty_echo.TextSendMessage(text='$$$ 09 回覆emoji訊息', emojis=emoji)
+    message = pretty_echo(name)
     print(message)
     return message
 
